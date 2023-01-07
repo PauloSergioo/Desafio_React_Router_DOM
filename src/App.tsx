@@ -1,11 +1,30 @@
-import Header from "./components/Header";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import About from "./routes/Home/About";
+import CardBody from "./routes/Home/CardBody";
+import NotFound from "./routes/Home/NotFound";
+import Products from "./routes/Home/Products";
+import Books from "./routes/Home/Products/Product/Books";
+import Computers from "./routes/Home/Products/Product/Computers";
+import Eletronics from "./routes/Home/Products/Product/Eletronics";
 
- export default function App() {
-
-
+export default function App() {
   return (
-   <Header/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}>
+          <Route index element={<Navigate to="/home" />} />
+          <Route path="home" element={<CardBody />} />
+            <Route path="products" element={<Products />} />
+            <Route path="computers" element={<Computers/>}/>
+            <Route path="eletronics" element={<Eletronics/>}/>
+            <Route path="books" element={<Books/>}/>
+            <Route />
+          <Route />
+          <Route path="about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
- 

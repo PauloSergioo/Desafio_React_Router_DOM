@@ -1,8 +1,9 @@
 header {
-  background-color: blue;
+  background-color: var(--color-bg-primary);
   height: 70px;
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
 
 }
 
@@ -18,7 +19,16 @@ header {
 
 .listing-nav li {
   display: inline-block;
-  padding: 0 10px;
+  padding-right: 20px;
   font-size: 16px;
+  color: var(--color-font-primary);
+}
+
+.menu-item {
+  font-weight: 400;
+}
+
+.menu-active {
+  font-weight: bold;
 }
 
