@@ -7,7 +7,7 @@ export default function NavCard() {
       <div className="navcard container mb20">
         <ul className="listing-products">
           <NavLink
-            to="/computers"
+            to="computers"
             className={({ isActive }) =>
               isActive ? "menu-item menu-active" : "menu-item"
             }

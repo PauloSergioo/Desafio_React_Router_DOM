@@ -1,4 +1,4 @@
-import Listing from "../../../../../components/Listing";
+import Listing from "../../../../components/Listing";
 
 export default function Computers() {
   return (
